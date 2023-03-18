@@ -88,9 +88,9 @@ namespace SOUI
     };
 
         
-    class SIECtrl :	public SActiveX, public IMessageFilter, public IScriptCaller
+    class SIECtrl :	public SActiveX, public IMsgFilter, public IScriptCaller
     {
-        SOUI_CLASS_NAME(SIECtrl, L"iectrl")
+        DEF_SOBJECT(SActiveX, L"iectrl")
     public:
         SIECtrl(void);
         ~SIECtrl(void);
@@ -102,7 +102,7 @@ namespace SOUI
 		BOOL Navigate(const SStringW & strUrl);
     protected:
         virtual void OnAxActivate(IUnknown *pUnknwn);
-        virtual BOOL PreTranslateMessage(MSG* pMsg);
+        virtual BOOL WINAPI PreTranslateMessage(MSG* pMsg);
 
         int OnCreate(LPVOID);
         void OnDestroy();

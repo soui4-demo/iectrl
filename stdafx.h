@@ -12,7 +12,7 @@
 #include <control/SMessageBox.h>
 #include <control/souictrls.h>
 #include <SIECtrl.h>
-
+#include <SouiFactory.h>
 #include "resource.h"
 
 using namespace SOUI;
